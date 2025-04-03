@@ -1,0 +1,80 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.upload-box {
+    margin: 20px 0;
+}
+
+.upload-box input[type="file"] {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.upload-box button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.upload-box button:hover {
+    transform: scale(1.1);
+    background: #45a049;
+}
+
+.result-box {
+    margin-top: 20px;
+}
+
+#extractedText {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+    animation: textFade 0.5s ease-in;
+}
+
+@keyframes textFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#audioOutput {
+    margin-top: 10px;
+}
